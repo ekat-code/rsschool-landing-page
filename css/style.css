@@ -1,0 +1,139 @@
+@font-face {
+  font-family: 'Inter';
+  src:
+    local('Inter Regular'),
+    url('../assets/font/Inter-Italic-VariableFont_opsz\,wght.ttf') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Inter';
+  src:
+    local('Inter SemiBold'),
+    url('../assets/font/Inter-VariableFont_opsz\,wght.ttf') format('woff2');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* colors */
+:root {
+  --color-bg: #e1d4c9;
+  --color-bg-dark: #665f55;
+  --color-accent: #b0907a;
+  --color-text-dark: #403f3d;
+  --color-1: #c1b6ad;
+  --color-2: #292826;
+}
+
+/* base */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  margin: 0;
+  font-family: Inter, sans-serif;
+  min-height: 100vh;
+  background: var(--color-bg);
+}
+
+a {
+  text-decoration: none;
+  color: var(--color-text-dark);
+}
+
+li {
+  list-style: none;
+}
+
+h1 {
+  font-size: 4.5rem;
+  font-weight: 600;
+  line-height: 1.1;
+}
+
+h2 {
+  font-size: 3.75rem;
+  font-weight: 600;
+  line-height: 1.1;
+}
+
+.text-accent {
+  font-style: italic;
+  color: var(--color-accent);
+}
+
+.medium {
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+.container {
+  padding: 0 2.5rem;
+}
+
+.slider__btn {
+  width: 3.75em;
+  height: 3.75em;
+  border-radius: 6.25rem;
+  background: var(--color-bg);
+  border: 1px solid var(--color-bg-dark);
+  color: var(--color-bg-dark);
+}
+
+/* header */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav__list {
+  display: flex;
+  justify-content: center;
+  gap: 2.5rem;
+}
+
+/* enjoy */
+.enjoy__video {
+  width: 100%;
+  object-fit: cover;
+  border-radius: 2.5rem;
+}
+
+/* favorites */
+.slider {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* about */
+.about__container-images {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2.5rem;
+}
+
+/* mobile-app */
+.mobile-app {
+  display: flex;
+  align-items: center;
+}
+
+/* footer */
+.footer {
+  display: flex;
+  border-radius: 2.5rem;
+  background: var(--color-bg-dark);
+}
