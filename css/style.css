@@ -140,6 +140,23 @@ h2 {
   border-radius: 6.25rem;
 }
 
+/* burger-menu */
+.burger-menu {
+  display: none;
+  padding: 13px 10px;
+  border: 1px solid var(--color-bg-dark);
+  border-radius: 6.25rem;
+  color: var(--color-text-dark);
+  background: var(--color-bg);
+}
+
+.burger-menu__line {
+  display: block;
+  width: 1rem;
+  height: 1px;
+  background: var(--color-text-dark);
+}
+
 /* enjoy */
 .enjoy__video {
   width: 100%;
@@ -197,4 +214,16 @@ h2 {
   display: flex;
   border-radius: 2.5rem;
   background: var(--color-bg-dark);
+}
+
+@media (max-width: 768px) {
+  .burger-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .link-menu {
+    display: none;
+  }
 }
