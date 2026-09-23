@@ -6,7 +6,7 @@ const initialTheme = storedLocalStorage ? storedLocalStorage : 'light';
 
 root.setAttribute('data-theme', initialTheme);
 
-const updateState = () => {
+const updateThemeStatus = () => {
   const isDark = root.getAttribute('data-theme') === 'dark';
   if (btnToggle) {
     btnToggle.setAttribute('aria-pressed', isDark ? 'true' : 'false');
@@ -14,13 +14,13 @@ const updateState = () => {
 };
 
 btnToggle.addEventListener('click', () => {
-  const current = root.getAttribute('data-theme');
-  const next = current === 'dark' ? 'light' : 'dark';
+  const currentTheme = root.getAttribute('data-theme');
+  const next = currentTheme === 'dark' ? 'light' : 'dark';
 
   localStorage.setItem(userKey, next);
   root.setAttribute('data-theme', next);
 
-  updateState();
+  updateThemeStatus();
 });
 
-updateState();
+updateThemeStatus();
