@@ -140,6 +140,23 @@ h2 {
   border-radius: 6.25rem;
 }
 
+/* burger-menu */
+.burger-menu {
+  display: none;
+  padding: 13px 10px;
+  border: 1px solid var(--color-bg-dark);
+  border-radius: 6.25rem;
+  color: var(--color-text-dark);
+  background: var(--color-bg);
+}
+
+.burger-menu__line {
+  display: block;
+  width: 1rem;
+  height: 1px;
+  background: var(--color-text-dark);
+}
+
 /* enjoy */
 .enjoy__video {
   width: 100%;
@@ -195,6 +212,29 @@ h2 {
 /* footer */
 .footer {
   display: flex;
+  padding: 6.25rem;
   border-radius: 2.5rem;
   background: var(--color-bg-dark);
+}
+
+/* media */
+@media (max-width: 768px) {
+  .burger-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .link-menu {
+    display: none;
+  }
+
+  .about__container-images {
+    grid-template-columns: 1fr;
+  }
+
+  .about__container-image:nth-child(2),
+  .about__container-image:nth-child(3) {
+    display: none;
+  }
 }
