@@ -212,10 +212,12 @@ h2 {
 /* footer */
 .footer {
   display: flex;
+  padding: 6.25rem;
   border-radius: 2.5rem;
   background: var(--color-bg-dark);
 }
 
+/* media */
 @media (max-width: 768px) {
   .burger-menu {
     display: flex;
@@ -224,6 +226,15 @@ h2 {
   }
 
   .link-menu {
+    display: none;
+  }
+
+  .about__container-images {
+    grid-template-columns: 1fr;
+  }
+
+  .about__container-image:nth-child(2),
+  .about__container-image:nth-child(3) {
     display: none;
   }
 }
