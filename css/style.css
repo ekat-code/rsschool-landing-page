@@ -78,6 +78,10 @@ h2 {
   line-height: 1.1;
 }
 
+.active {
+  display: block;
+}
+
 .text-accent {
   font-style: italic;
   color: var(--color-accent);
@@ -171,6 +175,13 @@ h2 {
   align-items: center;
 }
 
+.slide {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 30rem;
+}
+
 /* about */
 .about__container-images {
   display: grid;
@@ -225,6 +236,25 @@ h2 {
     gap: 8px;
   }
 
+  .nav {
+    position: fixed;
+    top: 6vh;
+    right: -100%;
+    width: 75vw;
+    height: 80vh;
+    background: var(--color-bg);
+    transition: 0.5s;
+  }
+
+  .nav.active {
+    right: 0; 
+  }
+
+  .nav__list {
+    flex-direction: column;
+    align-items: center;
+  }
+
   .link-menu {
     display: none;
   }
@@ -236,5 +266,9 @@ h2 {
   .about__container-image:nth-child(2),
   .about__container-image:nth-child(3) {
     display: none;
+  }
+
+  .mobile-app {
+    flex-wrap: wrap;
   }
 }
