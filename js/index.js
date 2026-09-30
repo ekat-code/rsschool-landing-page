@@ -1,3 +1,5 @@
+import { handleBurgerMenuClick } from './burger-menu.js';
+
 const root = document.documentElement;
 const btnToggle = document.querySelector('.theme-switch');
 const userKey = 'user-theme';
@@ -24,3 +26,4 @@ btnToggle.addEventListener('click', () => {
 });
 
 updateThemeStatus();
+handleBurgerMenuClick();
